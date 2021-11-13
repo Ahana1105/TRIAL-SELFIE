@@ -39,13 +39,13 @@ Webcam.set({
     width : 360,
     heigth : 250,
     image_format : 'png',
-    png_quality = 90
+    png_quality : 90
 });
 
 camera = document.getElementById("camera");
 
 function take_snapshot() {
-    webcam.snap(function(data_uri) {
+    Webcam.snap(function(data_uri) {
         document.getElementById("result").innerHTML = '<img id="selfie_output" src="'+data_uri+'">';
         
     });
